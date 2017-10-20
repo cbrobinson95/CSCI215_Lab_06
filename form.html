@@ -10,20 +10,20 @@
 </head>
 <body>
 <h1>Reader Subscription Form</h1>
-<form class="subform"  method="post" action="submit.html">
+<form class="subform"  method="post" action="">
 	<p>
-		<label for="name">What is your name?</label>
-		<input type="text" name="name" id="name">
+		<label for="name" class="label">What is your name?</label>
+		<input type="text" name="name" id="name" onkeyup="checkForBracket()">
 	</p>
 	<p>
-		<label for="email">What is your email address?</label>
-		<input type="text" name="email" id="email">
+		<label for="email" class="label">What is your email address?</label>
+		<input type="text" name="email" id="email" onkeyup="checkEmail()">
 	</p>
 	<p>
-		<label for="age">What is your age?</label>
-		<input type="text" name="age" id="age">
+		<label for="age" class="label">What is your age?</label>
+		<input type="text" name="age" id="age" onkeyup="checkAge()">
 	</p>
-	<p>Rate your apartment farming skills
+	<p><span class="label">Rate your apartment farming skills</span>
 		<label>
 			<input name="skill" type="radio" value="novice">
 			Novice</label>
@@ -35,7 +35,7 @@
 			Advanced</label>
 	</p>
 	<p>
-		<label for="refer">Where did you hear about us? </label>
+		<label for="refer" class="label">Where did you hear about us? </label>
 		<select name="refer" id="refer">
 			<option value="null">Select One</option>
 			<option value="1">Friend</option>
@@ -45,12 +45,14 @@
 		</select>
 	</p>
 	<p>
-		<label for="comments">Any additional comments? </label>
+		<label for="comments" class="label">Any additional comments? </label>
 		<textarea name="comments" cols="35" rows="4" id="comments"></textarea>
 	</p>
 	<p>
-		<input type="submit" value="Subscribe">
+		<input type="submit" value="Subscribe" onclick="validate()">
 	</p>
 </form>
+
+<script src="action.js"></script>
 </body>
 </html>
